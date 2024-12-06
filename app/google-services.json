@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "984790872730",
+    "project_id": "orengit",
+    "storage_bucket": "orengit.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:984790872730:android:55fb2a1cb14f8a1af72523",
+        "android_client_info": {
+          "package_name": "com.example.finalprject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCI57ZLaFlw93ExlJtWmD5hsac6bShQpNI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
