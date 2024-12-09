@@ -46,6 +46,11 @@ public class GameLIst extends AppCompatActivity {
         startActivity(intent);
     }
 
+    private void navigateToMasteruser() {
+        Intent intent = new Intent(GameLIst.this, Masteruser.class);
+        startActivity(intent);
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
@@ -60,6 +65,9 @@ public class GameLIst extends AppCompatActivity {
 
             case R.id.menuDataEntry:
                 navigateToDataEntry();
+            case R.id.menuMastruser:
+                navigateToMasteruser();
+
 
 
         }

@@ -126,8 +126,10 @@ public class DataEntry extends AppCompatActivity {
         Intent intent = new Intent(DataEntry.this, GameLIst.class);
         startActivity(intent);
     }
-
-
+    private void navigateToMasteruser(){
+        Intent intent = new Intent(DataEntry.this, Masteruser.class);
+        startActivity(intent);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -142,6 +144,9 @@ public class DataEntry extends AppCompatActivity {
         switch (item.getItemId()){
             case R.id.menuGameList:
                 navigateToGameList();
+            case R.id.menuMastruser:
+                navigateToMasteruser();
+
         }
         return false;
     }

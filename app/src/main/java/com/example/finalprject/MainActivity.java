@@ -13,7 +13,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -40,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
                 if (isPaswordValid())
                     showErrorPasword();
                 else if (isInputValid()) {
-                    navigateToGameList();
+                    navigateToDataEntry();
                 } else {
                     showErrorMessage();
                 }
@@ -81,8 +80,8 @@ public class MainActivity extends AppCompatActivity {
 
         return !(8 > edtpasword.getText().length() && 3 < edtpasword.getText().length());
     }
-    private void navigateToGameList() {
-        Intent intent = new Intent(MainActivity.this, GameLIst.class);
+    private void navigateTodataentry() {
+        Intent intent = new Intent(MainActivity.this, DataEntry.class);
         startActivity(intent);
     }
 
@@ -91,27 +90,4 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main,menu);
-
-        return super.onCreateOptionsMenu(menu);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-
-        switch (item.getItemId()){
-            case R.id.menuGameList:
-                navigateToGameList();
-            case R.id.menuDataEntry:
-                navigateToDataEntry();
-
-
-        }
-
-
-        return super.onOptionsItemSelected(item);
-
-    }
 }

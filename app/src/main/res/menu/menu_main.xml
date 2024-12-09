@@ -8,5 +8,8 @@
     <item
         android:id="@+id/menuGameList"
         android:title="Gamelist" />
+    <item
+        android:id="@+id/menuMastruser"
+        android:title="Master User" />
 
 </menu>
