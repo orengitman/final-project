@@ -33,6 +33,7 @@ public class Signup extends AppCompatActivity {
         edtEmail = findViewById(R.id.edtEmail);
 
         btnToSignUp = findViewById(R.id.btnToSignUp);
+
         btnToSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -50,10 +51,30 @@ public class Signup extends AppCompatActivity {
 
     }
 
+
+
+    public void saveName(View view){
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("user");
+        myRef.setValue(edtusername.getText().toString());
+    }
+
+    public void savepassword(View view){
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("user");
+        myRef.setValue(edtpassword.getText().toString());
+    }
+
+    public void saveEmail(View view){
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("user");
+        myRef.setValue(edtEmail.getText().toString());
+    }
+
     public void saveuser (View view){
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("user");
-        user= new User(edtpassword.getText().toString(),edtusername.getText().toString()
+        user = new User(edtpassword.getText().toString(),edtusername.getText().toString()
         ,edtEmail.getText().toString());
         myRef.setValue(user);
     }
@@ -66,7 +87,8 @@ public class Signup extends AppCompatActivity {
 
 
     private boolean isInputValid() {
-        return (!edtpassword.getText().toString().trim().isEmpty())&&(!edtusername.getText().toString().trim().isEmpty()&&(!edtEmail.getText().toString().trim().isEmpty()));
+        return (!edtpassword.getText().toString().trim().isEmpty())&&(!edtusername.getText().toString().trim().isEmpty()&&
+                (!edtEmail.getText().toString().trim().isEmpty()));
     }
 
 
